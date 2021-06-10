@@ -53,19 +53,17 @@ let path = {
 }
 
 /* Tasks */
-function browserSync(done) {
+function browserSync() {
     browsersync.init({
         server: {
             baseDir: "./build/"
         },
         port: 3000
     });
-    done()
 }
 
-function browserSyncReload(done) {
+function browserSyncReload() {
     browsersync.reload();
-    done()
 }
 
 function html() {
@@ -92,9 +90,10 @@ function css() {
         .pipe(autoprefixer())
         .pipe(cssbeautify())
         .pipe(dest(path.build.css))
+        .pipe(browsersync.stream())
         .pipe(cssnano({
             zindex: false,
-            discardComments: {
+            discardComments: {     
                 removeAll: true
             }
         }))

@@ -1,0 +1,91 @@
+.phone {
+    &__wrapper {
+        position: relative;
+        padding-right: 70px;
+        min-height: 50px;
+    }
+    &__wrapper::after {
+        content: " ";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 15px 60px rgba(48, 171, 119, 0.5);
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        background-image: url("../images/icon-phone.svg");
+        background-repeat: no-repeat;
+    }
+    &--menu .phone__wrapper {
+        padding-right: 0;
+    }
+    &--menu .phone__wrapper::after {
+        top: 0;
+        left: 0;
+    }
+    &--menu .phone__popup {
+        display: none;
+    }
+    &--menu .phone__popup--tablet {
+        display: block;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+    &__number {
+        display: block;
+        width: 196px;
+        margin-left: auto;
+        font-family: "Raleway-Bold", sans-serif;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    &--menu .phone__number {
+        display: block;
+    }
+    &__popup {
+        display: block;
+        margin-left: auto;
+        line-height: 26px;
+        color: #32ab77;
+        cursor: pointer;
+    }
+    &__popup--tablet {
+        display: none;
+    }
+    &__popup--mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .phone {
+        &__number {
+            display: none;
+        }
+        &__popup {
+            display: none;
+        }
+        &__popup--tablet {
+            display: block;
+            padding-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .phone {
+        &__wrapper {
+            padding: 0;
+        }
+        &__popup--tablet {
+            display: none;
+        }
+        &__popup--mobile {
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

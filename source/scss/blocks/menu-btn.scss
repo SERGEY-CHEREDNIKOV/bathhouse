@@ -1,0 +1,52 @@
+// .header {
+//     &__menu-btn {
+//     }
+// }
+.menu-btn {
+    &__item {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 15px 60px rgba(48, 171, 119, 0.5);
+        cursor: pointer;
+        z-index: 3;
+    }
+    &__circle {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 42px;
+        height: 42px;
+        background-image: url("../images/icon-circle-btn-menu.svg");
+        background-repeat: no-repeat;
+        transition: all 0.5s ease;
+    }
+    &__line {
+        width: 18px;
+        height: 3px;
+        background-color: #32ab77;
+        margin: 2px auto;
+        transition: all 0.4s ease;
+    }
+    &--open-close .menu-btn__circle {
+        transform: rotate(180deg);
+    }
+    &--open-close .menu-btn__line--one {
+        transform: rotate(-45deg) translate(-3px, 3px) ;
+    }
+    &--open-close .menu-btn__line--two {
+        opacity: 0;
+    }
+    &--open-close .menu-btn__line--three {
+        transform: rotate(45deg) translate(-4px, -4px) ;
+    }
+}
+// .menu-btn--open {
+// }
+// .menu {
+//     &__text {
+//     }
+// }

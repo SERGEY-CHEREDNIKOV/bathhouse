@@ -1,0 +1,54 @@
+.button-video {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0px 15px 60px rgba(48, 171, 119, 0.15);
+    &__circle {
+        position: absolute;
+        // z-index: 2;
+        width: 102px;
+        height: 102px;
+        top: 9px;
+        left: 9px;
+        background-image: url("../images/button-video-circle.svg");
+        background-repeat: no-repeat;
+        transition: all 0.5s ease-in;
+    }
+
+    &__triangle {
+        position: relative;
+        width: 24px;
+        height: 32px;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        transition: all 0.5s ease-in;
+    }
+    & path {
+        transition: all 0.5s ease-in;
+    }
+    &:hover .button-video__circle {
+        transform: rotate(360deg);
+    }
+    &:hover path {
+        fill: #32ab77;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .button-video {
+        width: 80px;
+        height: 80px;
+        &__circle {
+            width: 68px;
+            height: 68px;
+            top: 6px;
+            left: 6px;
+            background-image: url("../images/button-video-circle-mobile.svg");
+        }
+    }
+}

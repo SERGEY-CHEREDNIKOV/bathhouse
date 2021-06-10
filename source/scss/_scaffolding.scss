@@ -1,28 +1,37 @@
-
 html {
     box-sizing: border-box;
 }
-  
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
 body {
-    font-family: 'SFProDisplay-Regular', sans-serif;
+    font-family: 'Raleway-Regular', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
     margin: 0;
-    padding: 0;     
+    padding: 0;
     min-width: 320px;
+    color: #103D2A;
+    // background-color: #d8e1dd;
+    // overflow: hidden;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
-}
-
-ul,li {
+}  
+            
+ul,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -69,7 +78,3 @@ button {
     -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
 }
-
-
-
-

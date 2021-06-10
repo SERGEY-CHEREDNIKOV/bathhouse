@@ -4,18 +4,23 @@
 @import  'variables';
 @import  'mixins';
 @import  'scaffolding'; 
-
+ 
 //  libraries 
 
-@import  'blocks/slick';
+@import  'blocks/slick'; 
 
+//  blocks  
 
-
-//  blocks 
-
+@import  'blocks/header';
+@import  'blocks/menu-btn';
+@import  'blocks/menu';
+@import  'blocks/phone';
+@import  'blocks/button-video';
+@import  'blocks/button';
+@import  'blocks/main';
+@import  'blocks/about-us';
  
  
-
 //  animation
 
 

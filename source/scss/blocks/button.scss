@@ -1,0 +1,65 @@
+.button {
+    position: relative;
+    display: block;
+    font-family: "DS_Stamper";
+    font-weight: 400;
+    width: 300px;
+    height: 55px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(129.81deg, #32ab77 27.27%, #1f983a 115.15%);
+    box-shadow: 0px 5px 1px 2px rgba(36, 136, 93, 1), 0px 10px 15px rgba(48, 171, 119, 0.5);
+    border-radius: 36px;
+    cursor: pointer;
+    text-transform: uppercase;
+    z-index: 1;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 30px;
+        top: 0;
+        right: 0;
+        background-image: url(../../images/button-after.svg);
+        background-repeat: no-repeat;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 187px;
+        height: 26px;
+        top: 0;
+        left: 0;
+        background-image: url("../../images/button-before.svg");
+        background-repeat: no-repeat;
+    }
+    &:hover {
+        background: linear-gradient(129.81deg, rgba(50, 171, 119, 0.8) 27.27%, rgba(31, 152, 58, 0.8) 115.15%);
+        box-shadow: 0px 5px 1px 2px rgba(36, 136, 93, 0.8), 0px 10px 15px rgba(48, 171, 119, 0.5);
+    }
+    &:active {
+        background: linear-gradient(129.81deg, rgba(50, 171, 119, 0.9) 27.27%, rgba(31, 152, 58, 0.9) 115.15%);
+        box-shadow: none;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    &.button--orange {
+        width: 236px;
+        background: linear-gradient(129.81deg, #f4a261 27.27%, #e9c46a 115.15%);
+        box-shadow: 0px 5px 1px 2px rgba(222, 155, 90, 1), 0px 10px 15px rgba(222, 155, 90, 0.25);
+    }
+    &--orange:hover {
+        background: linear-gradient(129.81deg, rgba(96%, 64%, 38%, 0.8) 27.27%, rgba(233, 196, 106, 0.8) 115.15%);
+        box-shadow: 0px 5px 1px 2px rgba(222, 155, 90, 0.8), 0px 10px 15px rgba(222, 155, 90, 0.5);
+    }
+    &--orange:active {
+        background: linear-gradient(129.81deg, rgba(96%, 64%, 38%, 0.9) 27.27%, rgba(233, 196, 106, 0.9) 115.15%);
+        box-shadow: none;
+    }
+}
+
+a.button {
+    padding-top: 15px;
+}
