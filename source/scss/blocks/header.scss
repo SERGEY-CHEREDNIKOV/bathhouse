@@ -32,11 +32,11 @@
         font-weight: 400;
         text-transform: uppercase;
         cursor: pointer;
+        transition: all 0.2s ease-in;
     }
-
-    // &__inner-text {
-    // }
-
+    &__navigation-link:hover {
+        color: #32ab77;
+    }
     &__text {
         position: relative;
         line-height: 26px;
@@ -57,33 +57,16 @@
     &__menu-btn {
         display: none;
     }
-
-    // &__logo {
-    //     width: calc(100%/12 * 2);
-    // }
-
-    // &__img {
-    // }
-
-    // &__inner-phone {
-    // }
-}
-
-.header {
-    &__bottom {
-    }
-
     &__wrapper-bottom {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-
     &__box-text {
         max-width: 740px;
     }
-
     &__title {
+        position: relative;
         font-family: "DS_Stamper";
         font-weight: 400;
         font-size: 50px;
@@ -92,17 +75,24 @@
         text-transform: uppercase;
         margin-bottom: 20px;
     }
-
+    &__title::before {
+        content: " ";
+        position: absolute;
+        top: 37px;
+        left: -10px;
+        width: 100%;
+        height: 20px;
+        background-image: url("../../images/title-line.svg");
+        z-index: -1;
+    }
     &__bottom-text {
         font-size: 24px;
         line-height: 36px;
         margin-bottom: 30px;
     }
-
     &__button {
         margin-bottom: 80px;
     }
-
     &__text-list {
         display: flex;
         justify-content: space-between;
@@ -110,12 +100,11 @@
         max-width: 540px;
         margin-left: -5px;
     }
-
     &__text-item {
         position: relative;
         padding-left: 50px;
         width: calc(50% - 10px);
-        margin: 0 5px 40px 5px; 
+        margin: 0 5px 40px 5px;
     }
     &__text-item--one::after {
         content: " ";
@@ -157,7 +146,6 @@
         background-image: url("../images/header-item-icon-4.svg");
         background-repeat: no-repeat;
     }
-
     &__box-img {
         display: flex;
         position: relative;
@@ -168,18 +156,6 @@
         left: -520px;
         z-index: 2;
     }
-
-    &__button-video {
-        // position: absolute;
-        // left: -500px;
-        // top: 200px;
-        // cursor: pointer;
-        // z-index: 1;
-        // background-image: url('../../images/icon-btn-video2.png');
-        // background-repeat: no-repeat;
-        // background-position: center center;
-    }
-
     &__video-text {
         width: 160px;
         line-height: 26px;
@@ -239,7 +215,7 @@
             display: flex;
             width: 200px;
         }
-        &__menu-btn p{
+        &__menu-btn p {
             padding-top: 15px;
             padding-left: 10px;
         }
@@ -260,6 +236,9 @@
             line-height: 48px;
             margin-bottom: 10px;
         }
+        &__title::before {
+            display: none;
+        }
         &__bottom-text {
             font-size: 18px;
             line-height: 32px;
@@ -271,169 +250,6 @@
         &__text-item {
             margin-bottom: 30px;
         }
-
-        //     &__inner {
-        //         flex-grow: 1;
-        //     }
-
-        //     &__navigation {
-        //         display: flex;
-        //         justify-content: space-between;
-        //         flex-wrap: wrap;
-        //         border-bottom: 1px solid #d8e1dd;
-        //         margin-bottom: 35px;
-        //         padding-bottom: 25px;
-        //     }
-        //     &__navigation-link {
-        //         display: block;
-        //         margin: 0 5px 0 5px;
-        //         font-family: "DS_Stamper";
-        //         font-size: 12px;
-        //         line-height: 16px;
-        //         font-weight: 400;
-        //         text-transform: uppercase;
-        //         cursor: pointer;
-        //     }
-
-        //     // &__inner-text {
-        //     // }
-
-        //     &__text {
-        //         position: relative;
-        //         line-height: 26px;
-        //         padding-left: 70px;
-        //     }
-        //     &__text::before {
-        //         content: " ";
-        //         position: absolute;
-        //         left: 0;
-        //         top: 0;
-        //         width: 50px;
-        //         height: 50px;
-        //         background-image: url("../images/icon-text.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__menu-btn {
-        //         display: none;
-        //     }
-
-        //     // &__logo {
-        //     //     width: calc(100%/12 * 2);
-        //     // }
-
-        //     // &__img {
-        //     // }
-
-        //     // &__inner-phone {
-        //     // }
-        // }
-
-        // .header {
-        //     &__bottom {
-        //     }
-
-        //     &__wrapper-bottom {
-        //         display: flex;
-        //         justify-content: space-between;
-        //         flex-wrap: wrap;
-        //     }
-
-        //     &__box-text {
-        //         max-width: 740px;
-        //     }
-
-        //     &__button {
-        //         margin-bottom: 80px;
-        //     }
-
-        //     &__text-list {
-        //         display: flex;
-        //         justify-content: space-between;
-        //         flex-wrap: wrap;
-        //         max-width: 520px;
-        //     }
-
-        //     &__text-item {
-        //         position: relative;
-        //         padding-left: 50px;
-        //         width: 50%;
-        //         margin-bottom: 40px;
-        //     }
-        //     &__text-item--one::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 24px;
-        //         height: 24px;
-        //         background-image: url("../images/header-item-icon-1.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__text-item--two::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 20px;
-        //         height: 32px;
-        //         background-image: url("../images/header-item-icon-2.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__text-item--three::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 24px;
-        //         height: 24px;
-        //         background-image: url("../images/header-item-icon-3.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__text-item--four::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 19px;
-        //         height: 27px;
-        //         background-image: url("../images/header-item-icon-4.svg");
-        //         background-repeat: no-repeat;
-        //     }
-
-        //     &__box-img {
-        //         display: flex;
-        //         position: relative;
-        //     }
-        //     &__inner-video {
-        //         position: absolute;
-        //         top: 200px;
-        //         left: -520px;
-        //         z-index: 2;
-        //     }
-
-        //     &__button-video {
-        //         // position: absolute;
-        //         // left: -500px;
-        //         // top: 200px;
-        //         // cursor: pointer;
-        //         // z-index: 1;
-        //         // background-image: url('../../images/icon-btn-video2.png');
-        //         // background-repeat: no-repeat;
-        //         // background-position: center center;
-        //     }
-
-        //     &__video-text {
-        //         width: 160px;
-        //         line-height: 26px;
-        //         color: #96aba2;
-        //     }
-        //     &__image {
-        //         position: absolute;
-        //         top: -30px;
-        //         right: -233px;
-        //         width: 770px;
-        //     }
-        //
     }
 }
 @media screen and (max-width: 660px) {
@@ -441,7 +257,7 @@
         &__menu-btn {
             width: auto;
         }
-        &__menu-btn p{
+        &__menu-btn p {
             display: none;
             padding: 0;
         }
@@ -472,184 +288,5 @@
         &__text-item {
             width: 100%;
         }
-
-        //     &__inner {
-        //         flex-grow: 1;
-        //     }
-
-        //     &__navigation {
-        //         display: flex;
-        //         justify-content: space-between;
-        //         flex-wrap: wrap;
-        //         border-bottom: 1px solid #d8e1dd;
-        //         margin-bottom: 35px;
-        //         padding-bottom: 25px;
-        //     }
-        //     &__navigation-link {
-        //         display: block;
-        //         margin: 0 5px 0 5px;
-        //         font-family: "DS_Stamper";
-        //         font-size: 12px;
-        //         line-height: 16px;
-        //         font-weight: 400;
-        //         text-transform: uppercase;
-        //         cursor: pointer;
-        //     }
-
-        //     // &__inner-text {
-        //     // }
-
-        //     &__text {
-        //         position: relative;
-        //         line-height: 26px;
-        //         padding-left: 70px;
-        //     }
-        //     &__text::before {
-        //         content: " ";
-        //         position: absolute;
-        //         left: 0;
-        //         top: 0;
-        //         width: 50px;
-        //         height: 50px;
-        //         background-image: url("../images/icon-text.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__menu-btn {
-        //         display: none;
-        //     }
-
-        //     // &__logo {
-        //     //     width: calc(100%/12 * 2);
-        //     // }
-
-        //     // &__img {
-        //     // }
-
-        //     // &__inner-phone {
-        //     // }
-        // }
-
-        // .header {
-        //     &__bottom {
-        //     }
-
-        //     &__wrapper-bottom {
-        //         display: flex;
-        //         justify-content: space-between;
-        //         flex-wrap: wrap;
-        //     }
-
-        //     &__box-text {
-        //         max-width: 740px;
-        //     }
-
-        //     &__title {
-        //         font-family: "DS_Stamper";
-        //         font-weight: 400;
-        //         font-size: 50px;
-        //         line-height: 62px;
-        //         color: #103d2a;
-        //         text-transform: uppercase;
-        //         margin-bottom: 20px;
-        //     }
-
-        //     &__bottom-text {
-        //         font-size: 24px;
-        //         line-height: 36px;
-        //         margin-bottom: 30px;
-        //     }
-
-        //     &__button {
-        //         margin-bottom: 80px;
-        //     }
-
-        //     &__text-list {
-        //         display: flex;
-        //         justify-content: space-between;
-        //         flex-wrap: wrap;
-        //         max-width: 520px;
-        //     }
-
-        //     &__text-item {
-        //         position: relative;
-        //         padding-left: 50px;
-        //         width: 50%;
-        //         margin-bottom: 40px;
-        //     }
-        //     &__text-item--one::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 24px;
-        //         height: 24px;
-        //         background-image: url("../images/header-item-icon-1.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__text-item--two::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 20px;
-        //         height: 32px;
-        //         background-image: url("../images/header-item-icon-2.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__text-item--three::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 24px;
-        //         height: 24px;
-        //         background-image: url("../images/header-item-icon-3.svg");
-        //         background-repeat: no-repeat;
-        //     }
-        //     &__text-item--four::after {
-        //         content: " ";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 19px;
-        //         height: 27px;
-        //         background-image: url("../images/header-item-icon-4.svg");
-        //         background-repeat: no-repeat;
-        //     }
-
-        //     &__box-img {
-        //         display: flex;
-        //         position: relative;
-        //     }
-        //     &__inner-video {
-        //         position: absolute;
-        //         top: 200px;
-        //         left: -520px;
-        //         z-index: 2;
-        //     }
-
-        //     &__button-video {
-        //         // position: absolute;
-        //         // left: -500px;
-        //         // top: 200px;
-        //         // cursor: pointer;
-        //         // z-index: 1;
-        //         // background-image: url('../../images/icon-btn-video2.png');
-        //         // background-repeat: no-repeat;
-        //         // background-position: center center;
-        //     }
-
-        //     &__video-text {
-        //         width: 160px;
-        //         line-height: 26px;
-        //         color: #96aba2;
-        //     }
-        //     &__image {
-        //         position: absolute;
-        //         top: -30px;
-        //         right: -233px;
-        //         width: 770px;
-        //     }
-        //
     }
 }

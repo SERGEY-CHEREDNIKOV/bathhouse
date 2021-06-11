@@ -58,4 +58,11 @@ window.addEventListener('load', function () {
     }
 
     burgerMenu('.menu');
+
+// ---------- slider ------------    
+
+    $('.about-us__slider').slick({
+        prevArrow: '<button class="about-us__slider-btn  about-us__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+        nextArrow: '<button class="about-us__slider-btn  about-us__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+    });
 });
