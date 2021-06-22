@@ -1,0 +1,104 @@
+.slider-tab {
+    position: relative;
+    &__slider-btn {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        top: 43%;
+    }
+    &__slider-btnprev {
+        left: -80px;
+    }
+    &__slider-btnnext {
+        right: -80px;
+    }
+    &__card {
+        max-width: 370px;
+        padding: 30px 0 40px 0;
+        background-color: #fff;
+        box-shadow: 0px 3px 15px rgba(48, 171, 119, 0.2);
+        border-radius: 24px;
+        margin: 15px;
+    }
+    &__title {
+        font-family: "DS_Stamper";
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    &__img {
+        margin-bottom: 35px;
+    }
+
+    &__price {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__price-number {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 32px;
+        padding: 0 5px;
+    }
+
+    &__btn {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .slider-tab {
+        &__slider-btn {
+            z-index: 1;
+        }
+        &__slider-btnprev {
+            left: 0;
+        }
+        &__slider-btnnext {
+            right: 0;
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .slider-tab {
+        &__btn.button {
+            width: 90%;
+        }
+        &__card {
+            max-width: 100%;
+        }
+        &__img {
+            margin: 0 auto;
+        }
+        &__slider-btn {
+            top: 103%;
+        }
+        &__slider-btnprev {
+            left: 10px;
+        }
+        &__slider-btnnext {
+            left: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slider-tab {
+        &__slider-btn {
+            transform: scale(0.7);
+        }
+        &__slider-btnprev {
+            left: 40%;
+            margin-left: -20px;
+        }
+        &__slider-btnnext {
+            // margin-left: 20px;
+            left: 50%;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.tabs {
+    &__triggers {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    &__triggers-item {
+        position: relative;
+        font-family: "DS_Stamper";
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 30px;
+        color: #f0ae64;
+        padding: 15px 50px;
+        z-index: 1;
+    }
+    &__triggers-item.tabs__triggers-item--active {
+        color: #fff;
+    }
+    &__triggers-item.tabs__triggers-item--active::before {
+        position: absolute;
+        content: " ";
+        top: 0;
+        left: -44px;
+        width: 273px;
+        height: 75px;
+        background-image: url(../images/tab-btn-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+    &__content-item {
+        display: none;
+    }
+    &__content-item.tabs__content-item--active {
+        display: block;
+    }
+
+    &__content-slider {
+        margin-bottom: 60px;
+    }
+    &__button-more.button {
+        width: 340px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .tabs {
+        &__content-slider {
+            margin-bottom: 15px;
+        }
+        &__button-more.button {
+            margin: 0 15px 0 auto;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .tabs {
+        &__content-slider {
+            margin-bottom: 100px;
+        }
+        &__button-more.button {
+            width: 280px;
+            margin: 0 auto;
+        }
+        &__triggers-item {
+            font-size: 18px;
+            line-height: 30px;
+            padding: 15px 38px;
+        }
+        &__triggers-item.tabs__triggers-item--active::before {
+            position: absolute;
+            content: " ";
+            top: 0;
+            left: -40px;
+            width: 220px;
+            height: 60px;
+            background-image: url(../images/tab-btn-bg.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    .tabs {
+        &__triggers-item.tabs__triggers-item--active::before {
+            top: 8px;
+            left: -16px;
+            width: 170px;
+            height: 60px;
+        }
+    }
+}

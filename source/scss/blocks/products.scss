@@ -1,6 +1,79 @@
 .products {
-    padding-top: 220px;
+    position: relative;
     background-color: #eff7f3;
+    @keyframes cloud-animation-left {
+        0%,
+        50%,
+        100% {
+            transform: translateY(0px) translateX(0px);
+        }
+        30%,
+        80% {
+            transform: translateY(10px) translateX(5px);
+        }
+    }
+    &__icon-animation {
+        content: " ";
+        position: absolute;
+        top: 96px;
+        right: 30px;
+        width: 232px;
+        height: 239px;
+        background-image: url("../images/icon-animation-2.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: cloud-animation-left 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+        z-index: 2;
+    }
+    &__title {
+        position: relative;
+        font-family: "DS_Stamper";
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 62px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 1;
+        margin-bottom: 35px;
+    }
+    &__title::before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 38px;
+        width: 610px;
+        height: 20px;
+        background-image: url("../images/title-line.svg");
+        background-repeat: no-repeat;
+    }
+
+}
+@media screen and (max-width: 1600px) {
+    .products {
+        &__icon-animation {
+            top: 150px;
+            right: 15px;
+            width: 116px;
+            height: 117px;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .products {
+        &__icon-animation {
+            display: none;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 48px;
+        }
+        &__title::before {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 770px) {
+    
 }
 
 @media screen and (max-width: 660px) {
@@ -9,5 +82,13 @@
     }
 }
 
+@media screen and (max-width: 430px) {
+    .products {
+        &__title {
+            font-size: 21px;
+            line-height: 32px;
+        }
+    }
+}
 
 

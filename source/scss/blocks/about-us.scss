@@ -1,7 +1,7 @@
 .about-us {
     position: relative;
     padding: 95px 0;
-    @keyframes cloud-animation-left {
+    @keyframes cloud-animation-right {
         0%,
         50%,
         100% {
@@ -21,8 +21,8 @@
         height: 234px;
         background-image: url("../images/icon-animation-1.svg");
         background-repeat: no-repeat;
-        background-size: cover;
-        animation: cloud-animation-left 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+        background-size: contain;
+        animation: cloud-animation-right 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
     }
     &::before {
         content: "";
@@ -41,6 +41,7 @@
         width: 100%;
         height: 235px;
         background-image: url("../images/about-line-bottom.svg");
+        z-index: 1;
     }
     &__wrapper {
         display: flex;
@@ -121,7 +122,7 @@
         &__box-text {
             max-width: 100%;
             order: -1;
-            margin-bottom: 15px;
+            margin-bottom: 80px;
         }
         &__slider {
             margin: 0 auto;
@@ -161,6 +162,15 @@
         }
         &__img {
             padding-top: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .about-us{
+        &__title {
+            font-size: 21px;
+            line-height: 32px;
         }
     }
 }
