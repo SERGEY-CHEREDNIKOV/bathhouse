@@ -31,7 +31,7 @@
         top: -120px;
         width: 100%;
         height: 130px;
-        background-image: url("../images/about-line-top.svg");
+        background-image: url("../images/split-blocks-1.svg");
     }
     &::after {
         content: "";
@@ -40,7 +40,7 @@
         bottom: -140px;
         width: 100%;
         height: 235px;
-        background-image: url("../images/about-line-bottom.svg");
+        background-image: url("../images/split-blocks-2.svg");
         z-index: 1;
     }
     &__wrapper {

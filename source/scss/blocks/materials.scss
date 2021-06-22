@@ -1,0 +1,107 @@
+.materials {
+    position: relative;
+    background-image: url(../images/materials-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::before {
+        content: " ";
+        position: absolute;
+        top: -200px;
+        left: 0;
+        height: 330px;
+        width: 100%;
+        background-image: url("../../images/split-blocks-3.svg");
+        z-index: 1;
+    }
+    &__wrapper {
+        max-width: 475px;
+    }
+    &__title {
+        font-family: "DS_Stamper";
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        line-height: 32px;
+        margin-bottom: 50px;
+    }
+
+    &__advantage-list {
+    }
+
+    &__advantage-item {
+        position: relative;
+        padding-left: 120px;
+        margin-bottom: 30px;
+    }
+    &__advantage-item::before {
+        content: " ";
+        position: absolute;
+        top: 7px;
+        left: 5px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 5px #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__advantage-item--one::before {
+        background-image: url("../images/materials-icon-1.jpg");
+    }
+    &__advantage-item--two::before {
+        background-image: url("../images/materials-icon-2.jpg");
+    }
+    &__advantage-item--three::before {
+        background-image: url("../images/materials-icon-3.jpg");
+    }
+
+    &__advantage-title {
+        font-family: "DS_Stamper";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    &__advantage-text {
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .materials {
+        &__title {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 30px;
+        }
+        &__advantage-item {
+            padding-left: 90px;
+            margin-bottom: 20px;
+        }
+        &__advantage-item::before {
+            width: 60px;
+            height: 60px;
+            box-shadow: 0px 0px 0px 4px #fff;
+        }
+        &__advantage-title {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &__advantage-text {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
