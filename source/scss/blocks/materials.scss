@@ -10,8 +10,8 @@
         left: 0;
         height: 330px;
         width: 100%;
-        background-image: url("../../images/split-blocks-3.svg");
-        z-index: 1;
+        background-image: url("../images/split-blocks-3.svg");
+        z-index: 0;
     }
     &__wrapper {
         max-width: 475px;
@@ -24,15 +24,10 @@
         text-transform: uppercase;
         margin-bottom: 20px;
     }
-
     &__text {
         line-height: 32px;
         margin-bottom: 50px;
     }
-
-    &__advantage-list {
-    }
-
     &__advantage-item {
         position: relative;
         padding-left: 120px;
@@ -59,7 +54,6 @@
     &__advantage-item--three::before {
         background-image: url("../images/materials-icon-3.jpg");
     }
-
     &__advantage-title {
         font-family: "DS_Stamper";
         font-weight: 400;
@@ -68,7 +62,6 @@
         text-transform: uppercase;
         margin-bottom: 5px;
     }
-
     &__advantage-text {
         line-height: 32px;
     }
@@ -81,7 +74,6 @@
             line-height: 30px;
             margin-bottom: 15px;
         }
-
         &__text {
             font-size: 14px;
             line-height: 30px;

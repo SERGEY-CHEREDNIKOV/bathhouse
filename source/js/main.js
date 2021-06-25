@@ -60,7 +60,7 @@ window.addEventListener('load', function () {
     burgerMenu('.menu');
 
 
-// ---------- slider ------------    
+    // ---------- slider ------------    
 
 
     $('.about-us__slider').slick({
@@ -68,7 +68,7 @@ window.addEventListener('load', function () {
         nextArrow: '<button class="about-us__slider-btn  about-us__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
     });
 
-    $('.slider-tab').slick({ 
+    $('.slider-tab').slick({
         slidesToShow: 3,
         prevArrow: '<button class="slider-tab__slider-btn  slider-tab__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
         nextArrow: '<button class="slider-tab__slider-btn  slider-tab__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
@@ -87,9 +87,40 @@ window.addEventListener('load', function () {
             },
         ],
     });
- 
-    
-// ---------- tabs ------------   
+
+    $('.stage__slider').slick({
+        vertical: true,
+        slidesToShow: 1,
+        infinite: false,
+        verticalSwiping: true,
+        prevArrow: '<button class="stage__slider-btn  stage__slider-btnprev"><img src="images/arrow-slider-top.svg" alt="стрелка вверх"></button>',
+        nextArrow: '<button class="stage__slider-btn  stage__slider-btnnext"><img src="images/arrow-slider-bottom.svg" alt="стрелка вниз"></button>',
+    });
+
+    $(window).on("load resize", function () {
+        let width = window.innerWidth;
+
+        if (width <= 660) {
+            $('.stage__slider').slick('unslick');
+        } else {
+            $('.stage__slider').not('.slick-initialized').slick({
+                vertical: true,
+                slidesToShow: 1,
+                infinite: false,
+                verticalSwiping: true,
+                prevArrow: '<button class="stage__slider-btn  stage__slider-btnprev"><img src="images/arrow-slider-top.svg" alt="стрелка вверх"></button>',
+                nextArrow: '<button class="stage__slider-btn  stage__slider-btnnext"><img src="images/arrow-slider-bottom.svg" alt="стрелка вниз"></button>',
+            });
+        }
+    });
+
+
+    $('.stage__slider').on('afterChange', function (event, slick, currentSlide) {
+        $(".stage__slider-number--active").text(currentSlide + 1);
+    });
+
+
+    // ---------- tabs ------------   
 
 
     const toSwitchTabs = (triggerBtn, content, activeBtn, activeContent) => {
