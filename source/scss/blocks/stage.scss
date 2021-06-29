@@ -40,6 +40,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        z-index: 2;
     }
 
     &__text {
@@ -175,6 +176,7 @@
         }
         &__wrapper {
             display: block;
+            padding-bottom: 50px;
             padding-top: 0;
         }
         &__title {
@@ -212,7 +214,7 @@
             right: 50%;
             top: 50%;
             margin-top: 0;
-            transform: translateX(278px) translateY(-10px);
+            transform: translateX(278px) translateY(40px);
         }
     }
 }
@@ -227,6 +229,9 @@
 
 @media screen and (max-width: 660px) {
     .stage {
+        &__wrapper {
+            padding-bottom: 0;
+        }
         &__slider::before,
         &__slider-btn,
         &__slider-number,

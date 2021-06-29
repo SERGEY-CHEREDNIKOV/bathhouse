@@ -120,6 +120,18 @@ window.addEventListener('load', function () {
     });
 
 
+    $('.photos__slider').slick({
+        appendArrows:$('.photos__slider-box'),
+        prevArrow: '<button class="photos__slider-btn  photos__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+        nextArrow: '<button class="photos__slider-btn  photos__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+    });
+
+    $('.photos__slider').on('afterChange', function (event, slick, currentSlide) {
+        $(".photos__slider-number--active").text(currentSlide + 1);
+    });
+
+    
+
     // ---------- tabs ------------   
 
 
