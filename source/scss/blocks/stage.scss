@@ -1,16 +1,5 @@
 .stage {
     position: relative;
-    @keyframes cloud-animation-right {
-        0%,
-        50%,
-        100% {
-            transform: translateY(0px) translateX(0px);
-        }
-        30%,
-        80% {
-            transform: translateY(-5px) translateX(10px);
-        }
-    }
     &::before {
         content: "";
         position: absolute;

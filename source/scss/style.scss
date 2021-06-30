@@ -1,33 +1,33 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "scaffolding";
 
-@import  'normalize';
-@import  'fonts';
-@import  'variables';
-@import  'mixins';
-@import  'scaffolding'; 
- 
-//  libraries 
- 
-@import  'blocks/slick'; 
+// animation
 
-//  blocks   
+@import "blocks/animation";
 
-@import  'blocks/header';
-@import  'blocks/menu-btn';
-@import  'blocks/menu';
-@import  'blocks/phone';
-@import  'blocks/button-video';
-@import  'blocks/button';
-@import  'blocks/main';
-@import  'blocks/about-us';
-@import  'blocks/products';
-@import  'blocks/tabs';
-@import  'blocks/slider-tab';
-@import  'blocks/materials';
-@import  'blocks/stage';
-@import  'blocks/photos';
- 
- 
+//  libraries
+
+@import "blocks/slick";
+
+//  blocks
+
+@import "blocks/header";
+@import "blocks/menu-btn";
+@import "blocks/menu";
+@import "blocks/phone";
+@import "blocks/button-video";
+@import "blocks/button";
+@import "blocks/main";
+@import "blocks/about-us";
+@import "blocks/products";
+@import "blocks/tabs";
+@import "blocks/slider-tab";
+@import "blocks/materials";
+@import "blocks/stage";
+@import "blocks/photos";
+@import "blocks/companies";
+
 //  animation
-
-
-
