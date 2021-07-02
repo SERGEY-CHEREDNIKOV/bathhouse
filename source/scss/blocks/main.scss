@@ -19,6 +19,10 @@
         padding-top: 150px;
         padding-bottom: 150px;
     }
+    &__request {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
 }
 
 @media screen and (max-width: 1350px) {
@@ -39,7 +43,10 @@
         }
         &__companies {
             padding-top: 100px;
-            padding-bottom: 100px;
+            padding-bottom: 30px;
+        }
+        &__request {
+            padding-top: 100px;
         }
     }
 }

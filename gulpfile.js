@@ -26,6 +26,7 @@ let path = {
         html: "build/",
         js: "build/js/",
         library: "build/js/libraries/",
+        php: "build/php/",
         css: "build/css/",
         images: "build/images/",
         webP: "build/images/webp/",
@@ -35,6 +36,7 @@ let path = {
         html: "source/*.html",
         js: "source/js/*.js",
         library: "source/js/libraries/*.js",
+        php: "source/php/*",
         css: "source/scss/style.scss",
         images: "source/images/**/*.{jpg,png,svg,gif,ico}",
         webP: "source/images/**/*.{jpg,png}",
@@ -44,6 +46,7 @@ let path = {
         html: "source/**/*.html",
         js: "source/js/**/*.js",
         library: "source/js/libraries/*.js",
+        php: "source/php/*",
         css: "source/scss/**/*.scss",
         images: "source/images/**/*.{jpg,png,svg,gif,ico}",
         webP: "source/images/**/*.{jpg,png}",
@@ -93,7 +96,7 @@ function css() {
         .pipe(browsersync.stream())
         .pipe(cssnano({
             zindex: false,
-            discardComments: {     
+            discardComments: {
                 removeAll: true
             }
         }))
@@ -127,6 +130,11 @@ function js() {
 function library() {
     return src(path.src.library)
         .pipe(dest(path.build.library));
+}
+
+function php() {
+    return src(path.src.php)
+        .pipe(dest(path.build.php));
 }
 
 function images() {
@@ -165,12 +173,13 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.library], library);
+    gulp.watch([path.watch.php], php);
     gulp.watch([path.watch.images], images);
     gulp.watch([path.watch.webP], webP);
     gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, library, images, webP, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, library, php, images, webP, fonts));
 const watch = gulp.parallel(build, watchFiles, browserSync, browserSyncReload);
 
 /* Exports Tasks */
@@ -179,6 +188,7 @@ exports.libraries = libraries;
 exports.css = css;
 exports.js = js;
 exports.library = library;
+exports.php = php;
 exports.images = images;
 exports.webP = webP;
 exports.fonts = fonts;

@@ -1,6 +1,7 @@
 .photos {
     position: relative;
     background-color: #eff7f3;
+    z-index: 3;
     @keyframes cloud-animation-left {
         0%,
         50%,

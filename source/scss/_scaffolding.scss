@@ -59,6 +59,11 @@ button {
     color: inherit;
     background-color: transparent;
 }
+input,textarea {
+    padding: 0;
+    display: block;
+    width: 100%;
+}
 
 .container {
     max-width: 1200px;

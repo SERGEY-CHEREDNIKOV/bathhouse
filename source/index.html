@@ -421,7 +421,7 @@
                                 <p class="stage__item-text">
                                     Оставляете заявку на заказ любым удобным для вас способом.
                                 </p>
-                            </li> 
+                            </li>
                             <li class="stage__slider-item">
                                 <div class="stage__item-number">02.</div>
                                 <h3 class="stage__item-title">выбор модели</h3>
@@ -511,7 +511,7 @@
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section class="main__companies  companies">
             <div class="companies__icon-animation  companies__icon-animation--one"></div>
@@ -559,14 +559,45 @@
                     <div class="companies__box-img">
                         <img class="companies__client-img" src="images/companies-people.jpg" alt="">
                     </div>
-                    
+
                 </div>
+            </div>
+        </section>
+
+        <section class="main__request  request">
+            <div class="container">
+                <h2 class="request__title">
+                    заинтересовались? <br>
+                    оставляйте заявку! 
+                </h2>
+                <p class="request__text">
+                    Заполните форму ниже и мы обязательно свяжемся с вами и ответим на все интересующие вас вопросы.
+                </p>
+                <form class="request__form" id="form" action="#" method="POST">
+                    <div class="request__form-item">
+                        <label class="request__form-label" for="formName"></label>
+                        <input class="request__form-input" type="text" id="formName" name="name" placeholder="Имя" data-validate-field="name">
+                    </div>
+                    <div class="request__form-item">
+                        <label class="request__form-label" for="formPhone"></label>
+                        <input class="request__form-input" type="tel" id="formPhone" name="phone"
+                            placeholder="Телефон" data-validate-field="tel">
+                    </div>
+                    <div class="request__form-item">
+                        <label class="request__form-label" for="formMessage"></label>
+                        <textarea class="request__form-message" id="formMessage" name="message"
+                            placeholder="Сообщение (по желанию)"></textarea>
+                    </div>
+                    <button class="request__form-btn  button button--orange" type="submit">оставить заявку</button>
+                </form>
             </div>
         </section>
     </main>
 
     <script src="js/libraries/jquery.min.js"></script>
     <script src="js/libraries/slick.min.js"></script>
+    <script src="js/libraries/inputmask.min.js"></script>
+    <script src="js/libraries/just-validate.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
