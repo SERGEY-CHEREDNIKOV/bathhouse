@@ -227,7 +227,7 @@
         &__slider-number,
         &__slider-item--eight,
         &__slider-item--eight .stage__item-number {
-            display: none;
+            display: none !important;
         }
         &__title {
             font-size: 21px;

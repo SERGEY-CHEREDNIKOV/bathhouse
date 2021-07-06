@@ -130,7 +130,11 @@ window.addEventListener('load', function () {
         $(".photos__slider-number--active").text(currentSlide + 1);
     });
 
-
+    $('.facts__slider').slick({
+        appendArrows: $('.facts__slider-box'),
+        prevArrow: '<button class="facts__slider-btn  facts__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+        nextArrow: '<button class="facts__slider-btn  facts__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+    });
 
     // ---------- tabs ------------   
 

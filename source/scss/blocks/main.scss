@@ -21,7 +21,11 @@
     }
     &__request {
         padding-top: 150px;
-        padding-bottom: 100px;
+        padding-bottom: 200px;
+    }
+    &__facts {
+        padding-top: 50px;
+        padding-bottom: 150px;
     }
 }
 
@@ -30,6 +34,16 @@
         &__stage {
             padding-top: 30px;
             padding-bottom: 30px;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .main {
+        &__request {
+            padding-bottom: 150px;
+        }
+        &__facts {
+            padding-top: 20px;
         }
     }
 }
@@ -47,6 +61,7 @@
         }
         &__request {
             padding-top: 100px;
+            padding-bottom: 120px;
         }
     }
 }

@@ -568,20 +568,22 @@
             <div class="container">
                 <h2 class="request__title">
                     заинтересовались? <br>
-                    оставляйте заявку! 
+                    оставляйте заявку!
                 </h2>
                 <p class="request__text">
                     Заполните форму ниже и мы обязательно свяжемся с вами и ответим на все интересующие вас вопросы.
                 </p>
                 <form class="request__form" id="form" action="#" method="POST">
+                    <input type="hidden" name="formSubject" value="Тема письма">
                     <div class="request__form-item">
                         <label class="request__form-label" for="formName"></label>
-                        <input class="request__form-input" type="text" id="formName" name="name" placeholder="Имя" data-validate-field="name">
+                        <input class="request__form-input" type="text" id="formName" name="name" placeholder="Имя"
+                            data-validate-field="name">
                     </div>
                     <div class="request__form-item">
                         <label class="request__form-label" for="formPhone"></label>
-                        <input class="request__form-input" type="tel" id="formPhone" name="phone"
-                            placeholder="Телефон" data-validate-field="tel">
+                        <input class="request__form-input" type="tel" id="formPhone" name="phone" placeholder="Телефон"
+                            data-validate-field="tel">
                     </div>
                     <div class="request__form-item">
                         <label class="request__form-label" for="formMessage"></label>
@@ -592,6 +594,59 @@
                 </form>
             </div>
         </section>
+
+        <section class="main__facts  facts">
+            <div class="facts__icon-animation"></div>
+            <div class="container">
+                <h2 class="facts__title">
+                    4-х ступенчатый контроль качества благодаря собственному производству
+                </h2>
+                <p class="facts__text">
+                    Изготавливаем банную продукцию в собственных производственных цехах. Используем
+                    высокотехнологичное оборудование и исключительно натуральное и безопасное сырье, контролируем все
+                    этапы пошива и гарантируем высокое качество изделий.
+                </p>
+                <p class="facts__text">
+                    В нашей команде — квалифицированные дизайнеры, швеи и другие специалисты, которые любят свою работу
+                    и заботятся о комфорте клиентов.
+                </p>
+                <div class="facts__wrapper">
+                    <ul class="facts__list">
+                        <li class="facts__item">
+                            <p class="facts__item-quantity">5+</p>
+                            <p class="facts__item-text">лет успешной работы</p>
+                        </li>
+                        <li class="facts__item">
+                            <p class="facts__item-quantity">50+</p>
+                            <p class="facts__item-text">профессионалов в штате</p>
+                        </li>
+                        <li class="facts__item">
+                            <p class="facts__item-quantity">3000+</p>
+                            <p class="facts__item-text">довольных клиентов</p>
+                        </li>
+                    </ul>
+                    <div class="facts__wrapper-slider">
+                        <div class="facts__slider">
+                            <div class="facts__box-img">
+                                <img class="facts__img" src="images/facts-slider-1.jpg" alt="производство продукции"
+                                    class="facts__img">
+                            </div> 
+                            <div class="facts__box-img">
+                                <img class="facts__img" src="images/facts-slider-1.jpg" alt="производство продукции"
+                                    class="facts__img">
+                            </div>
+                            <div class="facts__box-img">
+                                <img class="facts__img" src="images/facts-slider-1.jpg" alt="производство продукции"
+                                    class="facts__img">
+                            </div>
+                        </div>
+                        <div class="facts__slider-box"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="js/libraries/jquery.min.js"></script>
