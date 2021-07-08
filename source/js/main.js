@@ -68,6 +68,8 @@ window.addEventListener('load', function () {
         nextArrow: '<button class="about-us__slider-btn  about-us__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
     });
 
+
+
     $('.slider-tab').slick({
         slidesToShow: 3,
         prevArrow: '<button class="slider-tab__slider-btn  slider-tab__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
@@ -88,6 +90,8 @@ window.addEventListener('load', function () {
         ],
     });
 
+
+
     $('.stage__slider').slick({
         vertical: true,
         slidesToShow: 1,
@@ -96,7 +100,22 @@ window.addEventListener('load', function () {
         prevArrow: '<button class="stage__slider-btn  stage__slider-btnprev"><img src="images/arrow-slider-top.svg" alt="стрелка вверх"></button>',
         nextArrow: '<button class="stage__slider-btn  stage__slider-btnnext"><img src="images/arrow-slider-bottom.svg" alt="стрелка вниз"></button>',
     });
+    $(document).ready(function () {
+        let widthOne = window.innerWidth;
 
+        if (widthOne <= 660) {
+            $('.stage__slider').slick('unslick');
+        } else {
+            $('.stage__slider').not('.slick-initialized').slick({
+                vertical: true,
+                slidesToShow: 1,
+                infinite: false,
+                verticalSwiping: true,
+                prevArrow: '<button class="stage__slider-btn  stage__slider-btnprev"><img src="images/arrow-slider-top.svg" alt="стрелка вверх"></button>',
+                nextArrow: '<button class="stage__slider-btn  stage__slider-btnnext"><img src="images/arrow-slider-bottom.svg" alt="стрелка вниз"></button>',
+            });
+        }
+    });
     $(window).on("load resize", function () {
         let width = window.innerWidth;
 
@@ -113,11 +132,10 @@ window.addEventListener('load', function () {
             });
         }
     });
-
-
     $('.stage__slider').on('afterChange', function (event, slick, currentSlide) {
         $(".stage__slider-number--active").text(currentSlide + 1);
     });
+
 
 
     $('.photos__slider').slick({
@@ -125,16 +143,83 @@ window.addEventListener('load', function () {
         prevArrow: '<button class="photos__slider-btn  photos__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
         nextArrow: '<button class="photos__slider-btn  photos__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
     });
-
     $('.photos__slider').on('afterChange', function (event, slick, currentSlide) {
         $(".photos__slider-number--active").text(currentSlide + 1);
     });
+
+
 
     $('.facts__slider').slick({
         appendArrows: $('.facts__slider-box'),
         prevArrow: '<button class="facts__slider-btn  facts__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
         nextArrow: '<button class="facts__slider-btn  facts__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
     });
+
+
+
+    $('.services__slider').slick({
+        appendArrows: $('.services__slider-box'),
+        prevArrow: '<button class="services__slider-btn  services__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+        nextArrow: '<button class="services__slider-btn  services__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+        responsive: [
+            {
+                breakpoint: 1020,
+                settings: {
+                    adaptiveHeight: true,
+                }
+            },
+            {
+                breakpoint: 778,
+                settings: {
+                    adaptiveHeight: false,
+                }
+            },
+        ],
+    });
+    $('.services__slider').on('afterChange', function (event, slick, currentSlide) {
+        $(".services__slider-number--active").text(currentSlide + 1);
+    });
+
+
+
+    $('.benefits__slider').slick({
+        slidesToShow: 1,
+        appendArrows: $('.benefits__slider-box'),
+        prevArrow: '<button class="benefits__slider-btn  benefits__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+        nextArrow: '<button class="benefits__slider-btn  benefits__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+    });
+    $(document).ready(function () {
+        let widthTwo = window.innerWidth;
+
+        if (widthTwo >= 660) {
+            $('.benefits__slider').slick('unslick');
+        } else {
+            $('.benefits__slider').not('.slick-initialized').slick({
+                slidesToShow: 1,
+                appendArrows: $('.benefits__slider-box'),
+                prevArrow: '<button class="benefits__slider-btn  benefits__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+                nextArrow: '<button class="benefits__slider-btn  benefits__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+            });
+        }
+    });
+    $(window).on("load resize", function () {
+        let widthTwo = window.innerWidth;
+
+        if (widthTwo >= 660) {
+            $('.benefits__slider').slick('unslick');
+        } else {
+            $('.benefits__slider').not('.slick-initialized').slick({
+                slidesToShow: 1,
+                appendArrows: $('.benefits__slider-box'),
+                prevArrow: '<button class="benefits__slider-btn  benefits__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+                nextArrow: '<button class="benefits__slider-btn  benefits__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+            });
+        }
+    });
+    $('.benefits__slider').on('afterChange', function (event, slick, currentSlide) {
+        $(".benefits__slider-number--active").text(currentSlide + 1);
+    });
+
 
     // ---------- tabs ------------   
 
@@ -175,7 +260,7 @@ window.addEventListener('load', function () {
 
                 let xhr = new XMLHttpRequest();
 
-                xhr.onreadystatechange = function() {
+                xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4) {
                         if (xhr.readyState === 200) {
                             console.log('Отправлено');

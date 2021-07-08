@@ -1,0 +1,199 @@
+.benefits {
+    position: relative;
+    background-color: #103d2a;
+    background-repeat: no-repeat;
+    background-image: url(../images/benefits-bg.jpg);
+    background-size: cover;
+    z-index: 1;
+    &::before {
+        content: " ";
+        position: absolute;
+        top: -200px;
+        left: 0;
+        height: 330px;
+        width: 100%;
+        background-image: url(../images/split-blocks-3.svg);
+        z-index: 0;
+    }
+    &__title {
+        position: relative;
+        font-family: "DS_Stamper";
+        font-size: 50px;
+        line-height: 62px;
+        text-transform: uppercase;
+        color: #ffffff;
+        max-width: 870px;
+        margin-bottom: 50px;
+        z-index: 1;
+    }
+    &__title::before {
+        content: " ";
+        position: absolute;
+        top: 39px;
+        left: -6px;
+        width: 327px;
+        height: 20px;
+        background-image: url(../images/line-title-2.svg);
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+    &__slider {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 800px;
+    }
+    &__slider-box {
+        display: none;
+    }
+    &__slider-card {
+        position: relative;
+        max-width: 370px;
+        min-height: 290px;
+        margin-right: 30px;
+        border: 40px solid transparent;
+        border-image: url("../images/benefits-border-card.svg") 30 round round;
+        margin-bottom: 30px;
+    }
+    &__card-title {
+        font-family: "DS_Stamper";
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+        max-width: 230px;
+        margin-bottom: 10px;
+    }
+    &__card-text {
+        font-size: 16px;
+        line-height: 32px;
+        color: #ffffff;
+        max-width: 290px;
+    }
+    &__card-number {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: "DS_Stamper";
+        font-size: 36px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #f4a261;
+    }
+    &__img-box {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 710px;
+        height: 1000px;
+        max-width: 1980px;
+        z-index: -1;
+    }
+    &__slider-box {
+        display: none;
+    }
+    &__slider-btn {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+    &__slider-btn:hover {
+        box-shadow: 0px 0px 17px 1px rgba(48, 171, 119, 0.6);
+        opacity: 1;
+    }
+    &__slider-number {
+        align-self: center;
+        font-family: "DS_Stamper";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    &__slider-number--active {
+        font-size: 24px;
+        line-height: 30px;
+        margin-right: -5px;
+        text-transform: uppercase;
+        color: #32ab77;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .benefits {
+        &__img-box {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .benefits {
+        &__title::before {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .benefits {
+        &__title {
+            font-size: 40px;
+            line-height: 48px;
+        }
+        &__slider {
+            justify-content: flex-start;
+        }
+        &__slider-card {
+            margin-right: 15px;
+        }
+        &__card-title {
+            font-size: 14px;
+            line-height: 24px;
+            max-width: 160px;
+        }
+
+        &__card-text {
+            font-size: 14px;
+            line-height: 30px;
+            max-width: 210px;
+        }
+
+        &__card-number {
+            font-size: 28px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .benefits {
+        &__title {
+            margin-bottom: 25px;
+        }
+        &__slider-box {
+            display: flex;
+            justify-content: space-between;
+            width: 240px;
+            margin: 0 auto;
+        }
+        &__slider {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        &__slider-card {
+            max-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .benefits {
+        &__title {
+            font-size: 21px;
+            line-height: 32px;
+        }
+    }
+}

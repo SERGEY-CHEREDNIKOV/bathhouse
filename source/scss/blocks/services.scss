@@ -1,0 +1,181 @@
+.services {
+    position: relative;
+    background-color: #eff7f3;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -120px;
+        width: 100%;
+        height: 278px;
+        background-image: url(../images/split-blocks-2.svg);
+        z-index: 1;
+    }
+    &__icon-animation {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 2;
+        top: 60%;
+        left: 37%;
+        width: 230px;
+        height: 230px;
+        background-image: url(../images/icon-animation-9.svg);
+        -webkit-animation: cloud-animation-right 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+        animation: cloud-animation-right 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__text-box {
+        max-width: 470px;
+        margin-right: 15px;
+    }
+    &__title {
+        font-family: "DS_Stamper";
+        font-size: 32px;
+        line-height: 42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    &__slider {
+        position: relative;
+        z-index: 2;
+        max-width: 470px;
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0px 15px 60px rgba(48, 171, 119, 0.15);
+    }
+    &__slider-card {
+        display: flex;
+        flex-direction: column;
+    }
+    &__card-title {
+        font-family: "DS_Stamper";
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        max-width: 390px;
+        margin: 30px 40px 10px 40px;
+    }
+    &__card-text {
+        font-size: 16px;
+        line-height: 32px;
+        max-width: 390px;
+        margin: 10px 40px;
+    }
+    &__slider-box {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 240px;
+        margin-top: -60px;
+        z-index: 2;
+    }
+    &__slider-btn {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+    &__slider-btn:hover {
+        box-shadow: 0px 0px 17px 1px rgba(48, 171, 119, 0.6);
+        opacity: 1;
+    }
+    &__slider-number {
+        align-self: center;
+        font-family: "DS_Stamper";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+    &__slider-number--active {
+        position: relative;
+        font-size: 24px;
+        line-height: 30px;
+        margin-right: -5px;
+        text-transform: uppercase;
+        color: #32ab77;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .services {
+        &__icon-animation {
+            width: 115px;
+            height: 115px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .services {
+        &__icon-animation {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1020px) {
+    .services {
+        &__text-box {
+            max-width: 100%;
+        }
+        &__slider {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+        &__slider .services__slider-card {
+            display: flex;
+            flex-direction: row;
+        }
+        &__slider-box {
+            margin: 0 auto;
+        }
+        &__card-title {
+            font-size: 16px;
+            line-height: 28px;
+            margin: 30px 20px 10px 20px;
+        }
+        &__card-text {
+            font-size: 14px;
+            line-height: 30px;
+            margin: 10px 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .services {
+        &__slider .services__slider-card {
+            display: block;
+        }
+        &__slider {
+            width: 470px;
+            margin: 0 auto 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .services {
+        &__title {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 30px;
+        }
+    }
+}
