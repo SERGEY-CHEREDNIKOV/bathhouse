@@ -221,6 +221,15 @@ window.addEventListener('load', function () {
     });
 
 
+
+    $('.testimonials__slider').slick({
+        appendArrows: $('.testimonials__slider-box'),
+        prevArrow: '<button class="testimonials__slider-btn  testimonials__slider-btnprev"><img src="images/slider-btn-left.svg" alt="стрелка влево"></button>',
+        nextArrow: '<button class="testimonials__slider-btn  testimonials__slider-btnnext"><img src="images/slider-btn-right.svg" alt="стрелка вправо"></button>',
+    });
+    $('.testimonials__slider').on('afterChange', function (event, slick, currentSlide) {
+        $(".testimonials__slider-number--active").text(currentSlide + 1);
+    });
     // ---------- tabs ------------   
 
 
@@ -281,4 +290,30 @@ window.addEventListener('load', function () {
     }
 
     validateForms('form', { tel: { required: true }, name: { required: true } });
+
+
+    // ---------- accordion ------------
+
+
+    const toAccordion = (triggersSelector, itemsSelector) => {
+        const btns = document.querySelectorAll(triggersSelector);
+        const blocks = document.querySelectorAll(itemsSelector);
+
+        blocks.forEach(block => {
+            block.classList.add('accordion-down')
+        });
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!this.classList.contains('accordion__item--active')) {
+                    btns.forEach(btn => {
+                        btn.classList.remove('accordion__item--active');
+                    });
+                    this.classList.add('accordion__item--active');
+                }
+            });
+        });
+    };
+
+    toAccordion('.accordion__title', '.accordion__text');
 });

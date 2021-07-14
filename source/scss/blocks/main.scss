@@ -33,6 +33,14 @@
     }
     &__benefits {
         padding-top: 120px;
+        padding-bottom: 140px;
+    }
+    &__questions {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    &__testimonials {
+        padding-top: 100px;
         padding-bottom: 120px;
     }
 }
@@ -84,6 +92,16 @@
         &__request {
             padding-top: 100px;
             padding-bottom: 120px;
+        }
+        &__benefits {
+            padding-bottom: 120px;
+        }
+        &__questions {
+            padding-top: 10px;
+            padding-bottom: 0;
+        }
+        &__testimonials {
+            padding-top: 120px;
         }
     }
 }

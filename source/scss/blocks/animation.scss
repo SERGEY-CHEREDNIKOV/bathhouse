@@ -20,3 +20,14 @@
         transform: translateY(-5px) translateX(10px);
     }
 }
+@keyframes accordion-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
