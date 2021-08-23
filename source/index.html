@@ -592,6 +592,15 @@
                     </div>
                     <button class="request__form-btn  button button--orange" type="submit">оставить заявку</button>
                 </form>
+                <div class="request__text-box">
+                    <p class="request__text">
+                        Индивидуальный предприниматель КИРЬЯК ВАДИМ СЕРГЕЕВИЧ <br>
+                        ИНН: 621156294854 / ОГРН: 311621419900031
+                    </p>
+                    <a class="request__link" href="#">
+                        Мы в Instagram
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -952,7 +961,8 @@
                         </div>
                     </div>
                     <div class="testimonials__slider-box">
-                        <div class="testimonials__slider-number"><span class="testimonials__slider-number--active">1</span> /4</div>
+                        <div class="testimonials__slider-number"><span
+                                class="testimonials__slider-number--active">1</span> /4</div>
                     </div>
                     <div class="testimonials__portfolio">
                         <h3 class="testimonials__portfolio-title">выполненная работа:</h3>
@@ -986,6 +996,50 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer  request">
+        <div class="container">
+            <h2 class="request__title">
+                заинтересовались? <br>
+                оставляйте заявку!
+            </h2>
+            <p class="request__text">
+                Заполните форму ниже и мы обязательно свяжемся с вами и ответим на все интересующие вас вопросы.
+            </p>
+            <form class="request__form" id="form" action="#" method="POST">
+                <input type="hidden" name="formSubject" value="Тема письма">
+                <div class="request__form-item">
+                    <label class="request__form-label" for="formName"></label>
+                    <input class="request__form-input" type="text" id="formName" name="name" placeholder="Имя"
+                        data-validate-field="name">
+                </div>
+                <div class="request__form-item">
+                    <label class="request__form-label" for="formPhone"></label>
+                    <input class="request__form-input" type="tel" id="formPhone" name="phone" placeholder="Телефон"
+                        data-validate-field="tel">
+                </div>
+                <div class="request__form-item">
+                    <label class="request__form-label" for="formMessage"></label>
+                    <textarea class="request__form-message" id="formMessage" name="message"
+                        placeholder="Сообщение (по желанию)"></textarea>
+                </div>
+                <button class="request__form-btn  button button--orange" type="submit">оставить заявку</button>
+            </form>
+            <div class="request__text-box  request__text-box--footer">
+                <p class="request__text-bottom">
+                    © 2021, «Дело в шапке»
+                </p>
+                <p class="request__text-bottom">
+                    Индивидуальный предприниматель: <br>
+                    ПЕТРОВ АНДРЕЙ ГРИГОРЬЕВИЧ <br>
+                    ИНН: 621119452084 / ОГРН: 311626730149361
+                </p>
+                <a class="request__link-instagram" href="#">
+                    Мы в Instagram
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/libraries/jquery.min.js"></script>
     <script src="js/libraries/slick.min.js"></script>

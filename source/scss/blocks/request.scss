@@ -85,11 +85,45 @@
     &__form-message::placeholder {
         color: #ffffff;
     }
-    &__form-message:focus::placeholder, .request__form-input.js-validate-error-field:focus::placeholder {
+    &__form-message:focus::placeholder,
+    .request__form-input.js-validate-error-field:focus::placeholder {
         color: #f4a261;
     }
     &__form-message:focus {
         border-bottom: 2px solid #f4a261;
+    }
+    &__text-box {
+        max-width: 470px;
+        display: none;
+    }
+    &__text-box.request__text-box--footer {
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    &__text-bottom {
+        font-size: 12px;
+        line-height: 26px;
+        color: #ffffff;
+    }
+
+    &__link-instagram {
+        position: relative;
+        padding-left: 25px;
+        font-size: 14px;
+        line-height: 26px;
+        color: #96aba2;
+    }
+    &__link-instagram::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 12px;
+        width: 12px;
+        background-repeat: no-repeat;
+        background-image: url('../images/icon-instagram.svg');
     }
 }
 .js-validate-error-field {
@@ -97,7 +131,7 @@
     border-bottom: 2px solid #870022 !important;
 }
 .js-validate-error-label {
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
     font-size: 16px !important;
     color: #870022 !important;
 }
